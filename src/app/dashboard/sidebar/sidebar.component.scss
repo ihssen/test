@@ -1,0 +1,37 @@
+.sidebar-container {
+    .navigation {
+        margin-bottom: 5px;
+    }
+    li {
+        border-radius: 0;
+        background-color: #f1f1f1
+    }
+    li:hover {
+        background-color: #fff
+    }
+    .sidebar-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: #dad8d8;
+        color: white;
+        font-size: 32px;
+      
+    }
+    span{
+        color: grey;
+        font-size: 14px;
+    }
+    .list-group-item{
+        border: none !important;        
+    }
+    
+}
+.bg-white{
+    background-color: white;
+}
+
+

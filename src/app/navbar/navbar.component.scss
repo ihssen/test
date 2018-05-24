@@ -1,0 +1,33 @@
+
+.navbar {
+    padding: 0 16px;
+}
+
+.navbar-collapse {
+    line-height: 50px;
+}
+
+.nav-elem {
+    text-transform: uppercase;
+    padding: 0 30px;
+    border-bottom: 4px solid #007bff;
+    font-weight: bold;
+}
+.nav-elem:hover, .active {
+    border-bottom: 4px solid white;
+}
+
+.nav-elem a:hover, .active a {
+    color: white !important;
+}
+
+.user-icon {
+    display: inherit;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: #bbbbbb;
+}
+
+.search:focus {
+    box-shadow: none;
+}

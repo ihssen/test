@@ -1,0 +1,77 @@
+<div class="rounded-0 adv-c">
+  <ul class="list-group">
+
+    <li class="list-group-item nav">
+      <div class="row">
+        <div class="col d-flex">
+          <div class="adv-icon">
+            <i class="fa fa-hourglass-half"></i>
+          </div>
+          <div class="col-md-9" (click)="openAdvancement()">
+            <div>Avancement</div>
+            <span class="span-nav">Visualisation et suivi de l'avancement</span>
+          </div>
+        </div>
+        <div class="col align-self-end text-right">
+          <div class="adv-icon2">
+            <i class="fa fa-file"></i>
+          </div>
+          <div class="adv-icon2">
+            <i class="fa fa-share-alt"></i>
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+    <li class="list-group-item content">
+      <span class="offset-md-1">Mon avancement</span>
+      <mat-slide-toggle [color]="'primary'" class="offset-md-1"></mat-slide-toggle>
+    </li>
+
+    <li class="list-group-item">
+        <div class="example-container mat-elevation-z8">
+            <table mat-table #table [dataSource]="dataSource" matSort>
+          
+              <!-- Position Column -->
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+              </ng-container>
+          
+              <!-- Name Column -->
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+              </ng-container>
+          
+              <!-- Weight Column -->
+              <ng-container matColumnDef="weight">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>
+                <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+              </ng-container>
+          
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="symbol">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </th>
+                <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+              </ng-container>
+          
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          </div>
+    </li>
+
+    <li class="list-group-item content">
+      <span class="offset-md-1">Avancement général interne</span>
+      <mat-slide-toggle [color]="'primary'" class="offset-md-1"></mat-slide-toggle>
+    </li>
+    <li class="list-group-item content">
+      <span class="offset-md-1">Avancement général externe</span>
+      <mat-slide-toggle [color]="'primary'" class="offset-md-1"></mat-slide-toggle>
+    </li>
+
+  </ul>
+
+</div>

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn text-primary rounded-0 bg-white btn-primary" id="dropdownBasic1" ngbDropdownToggle>
+        <div class="user-icon">
+          <i class="fa fa-user"></i>
+        </div>
+        Petter Carlsson
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item">Action - 1</button>
+        <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button>
+      </div>
+    </div>
+
+    <ul class="navbar-nav mx-auto"> 
+      <li class="nav-item nav-elem" [routerLink]="'home'"  [routerLinkActive]="'active'">
+        <a class="nav-link">Acceuil</a>
+      </li>
+      <li class="nav-item nav-elem" [routerLink]="'dashboard'"  [routerLinkActive]="'active'">
+        <a class="nav-link">Tableau de board</a>
+      </li>
+      <li class="nav-item nav-elem" [routerLink]="'flow'"  [routerLinkActive]="'active'">
+        <a class="nav-link" href="#">Flow</a>
+      </li>
+      <li class="nav-item nav-elem" [routerLink]="'report'"  [routerLinkActive]="'active'">
+        <a class="nav-link" href="#">Rapport</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="input-group">
+        <span class="input-group-append">
+          <div class="input-group-text border-right-0 bg-white">
+            <i class="fa fa-search"></i>
+          </div>
+        </span>
+        <input class="form-control search rounded-0 border-left-0 py-2 border" type="search" placeholder="Rechercher" id="example-search-input">
+      </div>
+    </form>
+  </div>
+</nav>
